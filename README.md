@@ -5,19 +5,14 @@ This project implements a secure and user-friendly news recommendation system us
 
 - *Registration and login*: Secure user authentication with bcrypt for password hashing and JWT for token-based authentication.
 
-- *Space news*: API used here will give the lastest news regarding the space.
-
-- *RESTful API*: Endpoints for user registration, login, preference management, and personalized news retrieval.
-*Robust error handling*: Catches and gracefully handles invalid requests, authentication errors, and authorization errors.
+- *Event registration*: API used here will give you information about events and let you register.
 
 - *JOI*: Streamlined input validation, reducing errors and improving data integrity.
 
 - *Modular Code*: Organized project structure for easy collaboration and future enhancements.
-MongoDB and mongoose: Efficient data storage and retrieval for user preferences.
 dotenv and .env: Securely storing environment variables, improving configuration management.
-Testing and Evaluation:
 
-The API is thoroughly tested using Postman or Curl to ensure functionality, correctness, and resilience.
+- *Testing and Evaluation*: The API is thoroughly tested using Postman or Curl to ensure functionality, correctness, and resilience.
 User feedback and performance analysis are used for continuous improvement.
 
 ### Prerequistes:
@@ -29,11 +24,13 @@ User feedback and performance analysis are used for continuous improvement.
 - `node index.js` - This will start the application on port 3000.
 
 ### Routes:
-- `POST` **/register**: Register a new user.
-- `POST` **/login**: Log in a user.
-- `GET` **/preferences**: Retrieve the news preferences for the logged-in user.
-- `PUT` **/preferences**: Update the news preferences for the logged-in user.
-- `GET` **/news**: Fetch news articles based on the logged-in user's preferences.
+- `POST` **/users/register**: Register a new user.
+- `POST` **/users/login**: Log in a user.
+- `POST` **/events**: To create a new event.
+- `GET` **/events**: To retrieve all the present events.
+- `PUT` **/events**: To update an event.
+- `DELETE` **/events**: To delete an event.
+- `POST` **/events/:id/register**: To register an user to a specific event.
 
 ### Example `.env`:
 ```text
